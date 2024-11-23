@@ -1,4 +1,4 @@
-Array Size,Bubble Sort Time (ns),Selection Sort Time (ns),Insertion Sort Time (ns),Merge Sort Time (ns),Shell Sort Time (ns),Quick Sort Time (ns),Heap Sort Time (ns)
+Array Size,Bubble Sort Time (ms),Selection Sort Time (ms),Insertion Sort Time (ms),Merge Sort Time (ms),Shell Sort Time (ms),Quick Sort Time (ms),Heap Sort Time (ms)
 10000,48,30,17,1,1,1,2
 20000,189,115,55,1,2,0,1
 30000,252,129,118,2,2,2,2
