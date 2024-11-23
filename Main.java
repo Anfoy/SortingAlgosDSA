@@ -10,13 +10,13 @@ public class Main {
 
 
         String[][] results = new String[sizes.length + 1][8];
-        results[0] = new String[]{"Array Size", "Bubble Sort Time (ns)",
-                "Selection Sort Time (ns)",
-                "Insertion Sort Time (ns)",
-                "Merge Sort Time (ns)",
-                "Shell Sort Time (ns)",
-                "Quick Sort Time (ns)",
-                "Heap Sort Time (ns)"
+        results[0] = new String[]{"Array Size", "Bubble Sort Time (ms)",
+                "Selection Sort Time (ms)",
+                "Insertion Sort Time (ms)",
+                "Merge Sort Time (ms)",
+                "Shell Sort Time (ms)",
+                "Quick Sort Time (ms)",
+                "Heap Sort Time (ms)"
         };
 
         for (int i = 0; i < sizes.length; i++) {
