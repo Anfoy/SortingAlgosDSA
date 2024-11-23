@@ -52,7 +52,7 @@ public class Main {
     }
 
     /**
-     * Tests a sorting algorithm and returns the time taken in nanoseconds.
+     * Tests a sorting algorithm and returns the time taken in milliseconds.
      *
      * @param array             the array to sort
      * @param sortingAlgorithms the SortingAlgorithms instance
