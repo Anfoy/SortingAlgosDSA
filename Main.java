@@ -6,17 +6,20 @@ public class Main {
 
     public static void main(String[] args) {
         SortingAlgorithms sortingAlgorithms = new SortingAlgorithms();
-        int[] sizes = {10000, 20000, 30000, 40000, 50000, 100000, 200000};
+        int[] sizes = {10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000,
+                110000, 120000, 130000, 140000, 150000, 160000,170000, 180000, 190000, 200000};
 
 
-        String[][] results = new String[sizes.length + 1][8];
+        String[][] results = new String[sizes.length + 1][10];
         results[0] = new String[]{"Array Size", "Bubble Sort Time (ms)",
                 "Selection Sort Time (ms)",
                 "Insertion Sort Time (ms)",
                 "Merge Sort Time (ms)",
                 "Shell Sort Time (ms)",
                 "Quick Sort Time (ms)",
-                "Heap Sort Time (ms)"
+                "Heap Sort Time (ms)",
+                "Linear Search Time (ms)",
+                "Binary Search Time (ms)"
         };
 
         for (int i = 0; i < sizes.length; i++) {
@@ -33,6 +36,8 @@ public class Main {
             results[i + 1][5] = String.valueOf(testSort(array.clone(), sortingAlgorithms, "Shell Sort"));
             results[i + 1][6] = String.valueOf(testSort(array.clone(), sortingAlgorithms, "Quick Sort"));
             results[i + 1][7] = String.valueOf(testSort(array.clone(), sortingAlgorithms, "Heap Sort"));
+            results[i + 1][8] = String.valueOf(testSort(array.clone(), sortingAlgorithms, "Linear Search"));
+            results[i+1][9] = String.valueOf(testSort(array.clone(), sortingAlgorithms, "Binary Search"));
         }
 
         exportResultsToCSV(results);
@@ -52,7 +57,7 @@ public class Main {
     }
 
     /**
-     * Tests a sorting algorithm and returns the time taken in milliseconds.
+     * Tests a sorting algorithm and returns the time taken in nanoseconds.
      *
      * @param array             the array to sort
      * @param sortingAlgorithms the SortingAlgorithms instance
@@ -110,6 +115,12 @@ public class Main {
                 break;
             case "Heap Sort":
                 sortingAlgorithms.heapSort(array);
+                break;
+            case "Binary Search":
+                sortingAlgorithms.binarySearch(array, 50000);
+                break;
+            case "Linear Search":
+                sortingAlgorithms.linearSearch(array, 50000);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown algorithm: " + algorithmName);

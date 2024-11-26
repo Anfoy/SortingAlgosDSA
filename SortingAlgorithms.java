@@ -190,12 +190,6 @@ public class SortingAlgorithms {
     }
 
 
-    private void swap(int[] array, int index1, int index2) {
-        int temp = array[index1];
-        array[index1] = array[index2];
-        array[index2] = temp;
-    }
-
 
     public boolean validate(int[] array, String algorithm, SortingAlgorithms sortingAlgorithms) {
         int[] copy = array.clone();
@@ -230,11 +224,34 @@ public class SortingAlgorithms {
         return Arrays.equals(copy, sortedCopy);
     }
 
+    public void binarySearch(int[] array, int target) {
+        quickSort(array, 0, array.length - 1);
+        int left = 0;
+        int right = array.length - 1;
 
+        while (left <= right) {
+            int middle = left + (right - left) / 2;
 
-    public long measureTime(Runnable sort) {
-        long start = System.currentTimeMillis();
-        sort.run();
-        return System.currentTimeMillis() - start;
+            if (array[middle] == target) {
+                return;
+            }
+
+            if (array[middle] > target) {
+                right = middle - 1;
+            }
+            else {
+                left = middle + 1;
+            }
+        }
+
     }
+
+    public void linearSearch(int[] array, int target) {
+        for (int j : array) {
+            if (j == target) {
+                return;
+            }
+        }
+    }
+
 }
