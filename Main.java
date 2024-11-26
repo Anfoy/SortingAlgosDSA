@@ -57,12 +57,12 @@ public class Main {
     }
 
     /**
-     * Tests a sorting algorithm and returns the time taken in nanoseconds.
+     * Tests a sorting algorithm and returns the time taken in milliseconds.
      *
      * @param array             the array to sort
      * @param sortingAlgorithms the SortingAlgorithms instance
      * @param algorithmName     the name of the sorting algorithm to test
-     * @return the time taken to execute the sorting algorithm in nanoseconds
+     * @return the time taken to execute the sorting algorithm in milliseconds
      */
     private static long testSort(int[] array, SortingAlgorithms sortingAlgorithms, String algorithmName) {
         long startTime = System.currentTimeMillis();
